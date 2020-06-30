@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "typescript",
+            "tsconfig": "tsconfig.json",
+            "problemMatcher": [
+                "$tsc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Run",
+            "command": "yo",
+            "args": [
+                "automage:${input:generator}"
+            ],
+            "problemMatcher": [],
+            "presentation": {
+                "focus": true
+            },
+            "options": {
+                "cwd": "/Users/${env:USER}/Desktop"
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "type": "pickString",
+            "id": "generator",
+            "description": "What type of component do you want to create?",
+            "options": ["app", "module", "theme"],
+            "default": "app"
+        }
+    ]
+}

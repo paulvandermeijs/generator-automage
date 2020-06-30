@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Default",
+        "value": ""
+    },
+    {
+        "name": "Magento Admin",
+        "value": "adminhtml"
+    },
+    {
+        "name": "Storefront",
+        "value": "frontend"
+    },
+    {
+        "name": "Basic",
+        "value": "base"
+    },
+    {
+        "name": "Cron",
+        "value": "crontab"
+    },
+    {
+        "name": "Web API REST",
+        "value": "webapi_rest"
+    },
+    {
+        "name": "Web API SOAP",
+        "value": "webapi_soap"
+    }
+]
