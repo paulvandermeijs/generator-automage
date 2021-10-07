@@ -1,4 +1,4 @@
-# PHAB
+# Automage
 
 Yeoman generator for Magento 2.
 

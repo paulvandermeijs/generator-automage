@@ -6,6 +6,7 @@ const Generator = require('../base');
 const os = require('os');
 const _ = require('lodash');
 const { vendorNameValidator, moduleNameValidator, moduleVersionValidator } = require('../../services/module');
+const { pascalCase } = require('change-case');
 
 module.exports = class extends Generator {
     async prompting() {
@@ -35,10 +36,10 @@ module.exports = class extends Generator {
 
         Object.assign(this.options, {
             vendor: {
-                name: answers.vendorName,
+                name: pascalCase(answers.vendorName),
             },
             module: {
-                name: answers.moduleName,
+                name: pascalCase(answers.moduleName),
                 version: answers.moduleVersion,
             }
         });
